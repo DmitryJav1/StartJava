@@ -1,21 +1,19 @@
-public class Cycle {
-	
+public class Cycle {	
 	public static void main(String[] args) {
+		for(int i = 0; i <= 20; i++) {
+	   	System.out.println(i); 
+		 }
 
-	for(int i = 0; i <= 20; i++) {
-	   System.out.println(i); 
-	 }
+	 	int number1 = -6;
+	 	while(number1 < 7) {
+	 		System.out.println(number1);
+	 		number1 = number1 + 1;
+	 	}
 
-	 int a = -6;
-	 while(a < 7) {
-	 	System.out.println(a);
-	 	a++;
-	 }
-
-	 int p = 9;
+	 	int number2 = 9;
         do {
-            p = p + 2;
-            System.out.println(p);
-        } while(p < 18);
+            number2 = number2 + 1;
+            System.out.println(number2);
+        } while(number2 < 20);
     }
 }

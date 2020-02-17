@@ -2,11 +2,10 @@ import java.util.*;
 
 public class Unicode {
 	public static void main(String[] args) {
-		// Создаём Integer, который задаст максимальное число
-		Random rand = new Random();
-		final int max = 126;
-		int rn;
-		rn = rand.nextInt(max) + 36;
-		System.out.println(Integer.toBinaryString(rn));
+		Random rand_char = new Random();
+		int number = 126;
+		int unicode = rand_char.nextInt(number) + 33;
+		char smile = (char)(unicode);
+		System.out.println(smile);
 	}
 }
