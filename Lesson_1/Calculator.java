@@ -46,11 +46,12 @@ public class Calculator {
 	    }
 
 	    if(symbol == '^') {
-	     int f = 1 * first;
-	     double s = 1.0 * second;
-	     double result4;
-	     result4 = Math.pow(f, s);
-	   	 System.out.println(first + "^" + second + "=" + result4);
+	    	int first_result = first;
+	    	for(int power = 1; power < second; power++) {
+	    		first = first * first;
+	    	}
+	   	    int result4 = first;
+	   	    System.out.println(first_result + "^" + second + "=" + result4);
 	    }
 
 	    if(symbol == '%') {
