@@ -1,15 +1,5 @@
 public class ConditionalStatement {
 	public static void main(String[] args) {
-
-		// TODO: идентифицировать человека
-
-		/*
-		Возраст - 26 лет
-		Пол - мужской
-		Рост - 1.75 м
-		Первая буква имени - 'И'
-		*/
-
 		int age = 26;
 		if(age > 20) {
 			System.out.println("Вы - взрослый граджанин");
@@ -20,16 +10,24 @@ public class ConditionalStatement {
 			System.out.println("Вы - мужчина");
 		}
 
-		double height = 1.75;
-		if(height < 1.80) {
-			System.out.println("Рост является другим");
+		if(gender == 0){
+			System.out.println("Вы - женщина");	
 		}
 
-		char letter = 'И';
-		if(letter == 'И') {
-			System.out.println("Вы - Максим");
-		} else if(letter == 'М') {
+		double height = 1.75;
+		if(height < 1.80) {
+			System.out.println("Вы - низкий");
+		} else if(height > 1.80){
+			System.out.println("Вы - высокий");
+		}
+
+		char firstNameLetter = 'И';
+		if(firstNameLetter == 'И') {
 			System.out.println("Вы - Илья");
+		} else if(firstNameLetter == 'М') {
+			System.out.println("Вы - Максим");
+		} else{
+			System.out.println("Ваше имя отсутствует в списке");
 		}
 
 		System.out.println(age + " лет");
