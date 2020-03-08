@@ -5,12 +5,12 @@ public class ConditionalStatement {
 			System.out.println("Вы - взрослый граджанин");
 		}
 
-		int gender = 1;
-		if(gender == 1) {
+		boolean maleGender = true;
+		if(maleGender == true) {
 			System.out.println("Вы - мужчина");
 		}
 
-		if(gender == 0){
+		if(maleGender == false) {
 			System.out.println("Вы - женщина");	
 		}
 
