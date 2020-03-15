@@ -8,7 +8,7 @@ public class GuessNumber {
 	  	int guess;
 	  	int maxNumber = 100;
 
-	  	hiddenNum = r.nextInt(maxNumber) + 1;
+	  	hiddenNum = r.nextInt(maxNumber + 1);
 
 	 	while(true) {	  		
 			System.out.println("Введите число, а потом ждите ответа от программы!");
