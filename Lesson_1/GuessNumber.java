@@ -5,22 +5,22 @@ public class GuessNumber {
 		Scanner scan = new Scanner(System.in);
 	  	Random r = new Random();
 	  	int hiddenNum;
-	  	int guess;
+	  	int guess = 0;
 	  	int maxNumber = 100;
+	  	String falseMessage = "А";
 
 	  	hiddenNum = r.nextInt(maxNumber + 1);
 
-	 	while(true) {	  		
-			System.out.println("Введите число, а потом ждите ответа от программы!");
+	  	for(String message = "Введите число, а потом ждите ответа от программы!"; guess != hiddenNum; message = "Ваше число " + falseMessage) {
+	  		System.out.println(message);
 	  		guess = scan.nextInt();
-
-	  		if(guess == hiddenNum) {
-	  			System.out.println("Вы угадали!");
-	  			break;
-	  		} else {
-	  			System.out.println("Ваше число меньше или больше правильного");
-	  			continue;
+	  		if(guess < hiddenNum) {
+	  			falseMessage = "меньше правильного";
 	  		}
-	  	}	
+	  		if(guess > hiddenNum) {
+	  			falseMessage = "больше правильного";
+	  		}	
+	  	}
+	  	System.out.println("Вы угадали!");
 	}
 }
