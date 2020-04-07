@@ -12,7 +12,7 @@ public class GuessNumber {
 	  	hiddenNum = 16; //r.nextInt(maxNumber + 1);
 
 	 	while(guess != hiddenNum) {	  		
-			System.out.println("Введите число, а потом ждите ответа от программы!");
+			System.out.println(message);
 	  		guess = scan.nextInt();
 
 	  		if(guess < hiddenNum) {
