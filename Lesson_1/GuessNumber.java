@@ -9,7 +9,7 @@ public class GuessNumber {
 	  	int maxNumber = 100;
 	  	String message = "Введите число, а потом ждите ответа от программы!";
 
-	  	hiddenNum = 16; //r.nextInt(maxNumber + 1);
+	  	hiddenNum = r.nextInt(maxNumber + 1);
 
 	 	while(guess != hiddenNum) {	  		
 			System.out.println(message);
