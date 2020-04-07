@@ -7,20 +7,23 @@ public class GuessNumber {
 	  	int hiddenNum;
 	  	int guess = 0;
 	  	int maxNumber = 100;
-	  	String falseMessage = "А";
+	  	String message = "Введите число, а потом ждите ответа от программы!";
 
-	  	hiddenNum = r.nextInt(maxNumber + 1);
+	  	hiddenNum = 16; //r.nextInt(maxNumber + 1);
 
-	  	for(String message = "Введите число, а потом ждите ответа от программы!"; guess != hiddenNum; message = "Ваше число " + falseMessage) {
-	  		System.out.println(message);
+	 	while(guess != hiddenNum) {	  		
+			System.out.println("Введите число, а потом ждите ответа от программы!");
 	  		guess = scan.nextInt();
+
 	  		if(guess < hiddenNum) {
-	  			falseMessage = "меньше правильного";
-	  		}
-	  		if(guess > hiddenNum) {
-	  			falseMessage = "больше правильного";
-	  		}	
+	  			System.out.println("Ваше число меньше правильного");
+	  			continue;
+	  		} else if (guess > hiddenNum) {
+	  			System.out.println("Ваше число больше правильного");
+	  			continue;
+	  		}	  	
 	  	}
-	  	System.out.println("Вы угадали!");
+		
+		System.out.println("Вы угадали!");	
 	}
 }
