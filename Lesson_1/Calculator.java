@@ -4,61 +4,35 @@ public class Calculator {
 	public static void main(String[] args) {
 	    Scanner scanner = new Scanner(System.in);
 	    System.out.println("1 - введи первое число, 2 - введи символ, 3 - введи второе число");
-	    int first = scanner.nextInt();
+	    int firstNum = scanner.nextInt();
 
-	    char symbol;
-	    symbol = scanner.next().charAt(0);
-	    switch(symbol) {
-	      case '+' :
-	        break;
-	      case '-' :
-	        break;
-	      case '*' :
-	        break;
-	      case '/' :
-	        break;
-	      case '^' :
-	        break;
-	      case '%' :
-	        break;
-	    }
+	    char sign;
+	    sign = scanner.next().charAt(0);
 
-	    int second = scanner.nextInt();
+	    int secondNum = scanner.nextInt();
 
-	    if(symbol == '*') {
-	   	  int result = first * second;
-	   	  System.out.println(first + "*" + second + "=" + result);
-	    }
-
-	    if(symbol == '/') {
-	   	 int result1 = first / second;
-	   	 System.out.println(first + "/" + second + "=" + result1);
-	    }
-
-	    if(symbol == '+') {
-	   	 int result2 = first + second;
-	   	 System.out.println(first + "+" + second + "=" + result2);
-	    }
-
-	    if(symbol == '-') {
-	   	 int result3 = first - second;
-	   	 System.out.println(first + "-" + second + "=" + result3);
-	    }
-
-	    if(symbol == '^') {
-	    	int first_result = first;
-	    	for(int power = 1; power < second; power++) {
-	    		first = first * first;
+	    if(sign == '*') {
+	   	  int result = firstNum * secondNum;
+	   	  System.out.println(firstNum + "*" + secondNum + "=" + result);
+	    } else if(sign == '/') {
+	    	int result2 = firstNum / secondNum;
+	    	System.out.println(firstNum + "/" + secondNum + "=" + result2);
+	    } else if(sign == '+') {
+	    	int result3 = firstNum + secondNum;
+	    	System.out.println(firstNum + "+" + secondNum + "=" + result3);
+	    } else if(sign == '-') {
+	    	int result4 = firstNum - secondNum;
+	    	System.out.println(firstNum + "-" + secondNum + "=" + result4);
+	    } else if(sign == '%') {
+	    	int result5 = firstNum % secondNum;
+	    	System.out.println(firstNum + "%" + secondNum + "=" + result5);
+	    } else if(sign == '^') {
+	    	int firstNumBeforeResult = firstNum;
+	    	for(int power = 1; power < secondNum; power++) {
+	    		firstNum = firstNumBeforeResult * firstNum;
 	    	}
-	   	    int result4 = first;
-	   	    System.out.println(first_result + "^" + second + "=" + result4);
-	    }
-
-	    if(symbol == '%') {
-	   	 int f1 = 1 * first;
-	   	 double s1 = 1.0 * second;
-	   	 int result5 = first % second;
-	   	 System.out.println(first + "%" + second + "=" + result5);
+	    	int result6 = firstNum;
+	    	System.out.println(firstNumBeforeResult + "^" + secondNum + "=" + result6);
 	    }
 	}
 }
