@@ -6,8 +6,7 @@ public class Calculator {
 	    System.out.println("1 - введи первое число, 2 - введи символ, 3 - введи второе число");
 	    int firstNum = scanner.nextInt();
 
-	    char sign;
-	    sign = scanner.next().charAt(0);
+	    char sign = scanner.next().charAt(0);
 
 	    int secondNum = scanner.nextInt();
 
@@ -27,12 +26,11 @@ public class Calculator {
 	    	int result5 = firstNum % secondNum;
 	    	System.out.println(firstNum + "%" + secondNum + "=" + result5);
 	    } else if(sign == '^') {
-	    	int firstNumBeforeResult = firstNum;
-	    	for(int power = 1; power < secondNum; power++) {
-	    		firstNum = firstNumBeforeResult * firstNum;
-	    	}
 	    	int result6 = firstNum;
-	    	System.out.println(firstNumBeforeResult + "^" + secondNum + "=" + result6);
+	    	for(int power = 1; power < secondNum; power++) {
+	    		firstNum = result6 * result6;
+	    	}
+	    	System.out.println(result6 + "^" + secondNum + "=" + firstNum);
 	    }
 	}
 }
