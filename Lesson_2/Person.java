@@ -1,26 +1,10 @@
 public class Person {
-	String gender() {
-		System.out.println("Мужчина");
-		return "Male";
-	}
 
-	String name() {
-		System.out.println("Гордон");
-		return "Gordon";
-	}
-
-	float height() {
-		return 174.4;
-	}
-
-	float weight() {
-		return 74.7;
-	}
-
-	int age() {
-		System.out.println("27 лет");
-		return 27;
-	}
+	String gender = "Male";
+	String name = "Gordon";
+	float height = 177.7;
+	float weight = 67.4;
+	int age = 27;
 
 	String run() {
 		System.out.println("Вы прошли 1567 м бегом");
@@ -41,5 +25,4 @@ public class Person {
 	boolean learnJava() {
 		return true;
 	}
-
 }
