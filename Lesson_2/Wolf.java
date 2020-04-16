@@ -6,6 +6,50 @@ public class Wolf {
 	private int age = 6;
 	private String color = "Белая";
 
+	void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	void setName(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	void setWeight(float weight) {
+		this.weight = weight;
+	}
+
+	public float getWeight() {
+		return weight;
+	}
+
+	void setAge(int age) {
+		if(age > 8) {
+			System.out.println("Некорректный возраст");
+		} else {
+			this.age = age;
+		} 					
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	void setColor(String color) {
+		this.color = color;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
 	public String walk() {
 		System.out.println("Волк прошёл 1 км за час");
 		return "1kph";
@@ -30,49 +74,5 @@ public class Wolf {
 		System.out.println("Волк бежит за зайцем");
 		System.out.println("Волк поймал зайца");
 		return "Wolf is hunting";
-	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public float getWeight() {
-		return weight;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public String getColor() {
-		return color;
-	}
-
-	void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	void setName(String name) {
-		this.name = name;
-	}
-
-	void setWeight(float weight) {
-		this.weight = weight;
-	}
-
-	void setAge(int age) {
-		if(age > 8) {
-			System.out.println("Некорректный возраст");
-		} else {
-			this.age = age;
-		} 					
-	}
-
-	void setColor(String color) {
-		this.color = color;
 	}
 }
