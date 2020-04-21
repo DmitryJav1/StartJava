@@ -7,26 +7,41 @@ public class Jaeger {
 
 	void setName(String name) {
 		this.name = name;
-		System.out.println("Name:" + name);
+	}
+
+	public String getName() {
+		return name;
 	}
 
 	void setLaunchDate(String launchDate) {
 		this.launchDate = launchDate;
-		System.out.println("Launch Date:" + launchDate);
+	}
+
+	public String getLaunchDate() {
+		return launchDate;
 	}
 
 	void setMark(int mark) {
 		this.mark = mark;
-		System.out.println("Mark - " + mark);
+	}
+
+	public int getMark() {
+		return mark;
 	}
 
 	void setStatus(String status) {
 		this.status = status;
-		System.out.println("Status: " + status);
+	}
+
+	public String getStatus() {
+		return status;
 	}
 
 	void setOrigin(String origin) {
 		this.origin = origin;
-		System.out.println("Origin: " + origin);
+	}
+
+	public String getOrigin() {
+		return origin;
 	}
 }
