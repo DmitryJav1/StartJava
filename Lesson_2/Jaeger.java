@@ -5,40 +5,28 @@ public class Jaeger {
 	private String status;
 	private String origin;
 
-	void setName(String name) {
+	public Jaeger(String name, String launchDate, int mark, String status, String origin) {
 		this.name = name;
+		this.launchDate = launchDate;
+		this.mark = mark;
+		this.status = status;
+		this.origin = origin;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	void setLaunchDate(String launchDate) {
-		this.launchDate = launchDate;
-	}
-
 	public String getLaunchDate() {
 		return launchDate;
-	}
-
-	void setMark(int mark) {
-		this.mark = mark;
 	}
 
 	public int getMark() {
 		return mark;
 	}
 
-	void setStatus(String status) {
-		this.status = status;
-	}
-
 	public String getStatus() {
 		return status;
-	}
-
-	void setOrigin(String origin) {
-		this.origin = origin;
 	}
 
 	public String getOrigin() {
