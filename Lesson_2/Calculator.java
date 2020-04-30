@@ -1,13 +1,35 @@
 import java.util.*;
 
 public class Calculator {
-	int firstNum;
+	private int firstNum;
+	private char sign;
+	private int secondNum;
 
-	char sign;
+	void setFirstNum(int firstNum) {
+		this.firstNum = firstNum;
+	}
 
-	int secondNum;
+	public int getFirstNum() {
+		return firstNum;
+	}
 
-	void mathOperations() {
+	void setSign(char sign) {
+		this.sign = sign;
+	}
+
+	public char getSign() {
+		return sign;
+	}
+
+	void setSecondNum(int secondNum) {
+		this.secondNum = secondNum;
+	}
+
+	public int getSecondNum() {
+		return secondNum;
+	}
+
+	void calculate() {
 	    if(sign == '*') {
 	   	  int result = firstNum * secondNum;
 	   	  System.out.println(firstNum + "*" + secondNum + "=" + result);
