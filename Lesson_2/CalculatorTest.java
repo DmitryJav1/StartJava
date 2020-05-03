@@ -5,9 +5,8 @@ public class CalculatorTest {
 		Scanner scan = new Scanner(System.in);
 		Calculator calculator = new Calculator();
 
-		boolean startWork = true;
-
-		while(startWork = true) {
+		while(true) {
+			int a;
 			System.out.print("Введите первое число: ");
 			calculator.setFirstNum(scan.nextInt());
 
@@ -19,15 +18,15 @@ public class CalculatorTest {
 
 			
 			calculator.calculate();
-			String extendWork = "Хотите продолжить?";
-			System.out.println(extendWork);
+			scan.nextLine();
+			System.out.println("Хотите продолжить?");
 			String answer = scan.nextLine();
 
 			if(answer == "да") {
 				continue;
 			} else if (answer == "нет") {
 				break;
-			} 
+			}
 		}
 	}
 }
