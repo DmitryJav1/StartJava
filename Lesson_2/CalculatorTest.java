@@ -8,13 +8,13 @@ public class CalculatorTest {
 		String answer;
 
 		for(int i = 1; i < loopSetup; i++) {
-			System.out.print("Введите первое число: ");
+			System.out.print("Enter first value: ");
 			calculator.setFirstNum(scan.nextInt());
 
-			System.out.print("Введите знак математической операции: ");
+			System.out.print("Enter math sign: ");
 			calculator.setSign(scan.next().charAt(0));
 
-			System.out.print("Введите второе число: ");
+			System.out.print("Enter second value: ");
 			calculator.setSecondNum(scan.nextInt());
 
 			

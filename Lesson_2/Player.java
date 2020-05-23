@@ -6,7 +6,7 @@ public class Player {
 
 	void setPlayers() {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Введите ники 2 игроков");
+		System.out.println("Enter nicknames of 2 players");
 		firstNickname = scan.nextLine();
 		secondNickname = scan.nextLine();
 	}

@@ -11,26 +11,26 @@ public class GuessNumber {
 		int maxNumber = 100;
 		int hiddenNum = r.nextInt(maxNumber + 1);
 		do {	  		
-			System.out.println("Введите число, а потом ждите ответа от программы!");
+			System.out.println("Enter the number and wait the verification");
 	  		firstGuess = scan.nextInt();
 	  		secondGuess = scan.nextInt();
 
 	  		if(firstGuess < hiddenNum) {
-	  			System.out.println("Число " + player.getFirstNickname() + " меньше правильного");
+	  			System.out.println("Number " + player.getFirstNickname() + " less than correct");
 
 	  		} else if (firstGuess > hiddenNum) {
-	  			System.out.println("Число " + player.getFirstNickname() + " больше правильного");
+	  			System.out.println("Number " + player.getFirstNickname() + " greater than correct");
 	  	  	} else if (firstGuess == hiddenNum) {
-	  	  		System.out.println("Игрок " + player.getFirstNickname() + " победил!");
+	  	  		System.out.println("Player " + player.getFirstNickname() + " won!");
 	  	  		break; 
 	  	  	}
 
 	  	  	if (secondGuess > hiddenNum) {
-	  	  		System.out.println("Число " + player.getSecondNickname() + " больше правильного");
+	  	  		System.out.println("Number " + player.getSecondNickname() + " greater than correct");
 	  	  	} else if (secondGuess < hiddenNum) {
-	  	  		System.out.println("Число " + player.getSecondNickname() + " меньше правильного");
+	  	  		System.out.println("Number " + player.getSecondNickname() + " less than correct");
 	  	  	} else if (secondGuess == hiddenNum) {
-	  	  		System.out.println("Игрок " + player.getSecondNickname() + " победил!");
+	  	  		System.out.println("Player " + player.getSecondNickname() + " won!");
 	  	  		break;
 	  	  	} 	
 		} while(firstGuess != hiddenNum || secondGuess != hiddenNum);	
