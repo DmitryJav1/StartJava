@@ -4,9 +4,10 @@ public class CalculatorTest {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		Calculator calculator = new Calculator();
+		int loopSetup = 3;
+		String answer;
 
-		while(true) {
-			int a;
+		for(int i = 1; i < loopSetup; i++) {
 			System.out.print("Введите первое число: ");
 			calculator.setFirstNum(scan.nextInt());
 
@@ -19,13 +20,17 @@ public class CalculatorTest {
 			
 			calculator.calculate();
 			scan.nextLine();
-			System.out.println("Хотите продолжить?");
-			String answer = scan.nextLine();
+			System.out.println("Want to continue?[yes/no]");
+		    answer = scan.nextLine();
 
-			if(answer == "да") {
-				continue;
-			} else if (answer == "нет") {
-				break;
+			if("yes".equals(answer)) {
+				loopSetup++;
+			} else if ("no".equals(answer)) {
+				i = loopSetup + i;
+			} else if (answer != "yes" && answer != "no") {
+				System.out.println("Want to continue?[yes/no]");
+				answer = scan.nextLine();
+				loopSetup--;
 			}
 		}
 	}
