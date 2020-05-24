@@ -24,13 +24,13 @@ public class CalculatorTest {
 		    answer = scan.nextLine();
 
 			if("yes".equals(answer)) {
-				loopSetup++;
+				continue;
 			} else if ("no".equals(answer)) {
-				i = loopSetup + i;
+				break;
 			} else if (answer != "yes" && answer != "no") {
 				System.out.println("Want to continue?[yes/no]");
 				answer = scan.nextLine();
-				loopSetup--;
+				i++;
 			}
 		}
 	}

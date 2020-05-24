@@ -4,6 +4,7 @@ public class Calculator {
 	private int firstNum;
 	private char sign;
 	private int secondNum;
+	private int result = 1;
 
 	void setFirstNum(int firstNum) {
 		this.firstNum = firstNum;
@@ -31,22 +32,22 @@ public class Calculator {
 
 	void calculate() {
 	    if(sign == '*') {
-	   	  int result = firstNum * secondNum;
+	   	  result = firstNum * secondNum;
 	   	  System.out.println(firstNum + "*" + secondNum + "=" + result);
 	    } else if(sign == '/') {
-	    	int result = firstNum / secondNum;
+	    	result = firstNum / secondNum;
 	    	System.out.println(firstNum + "/" + secondNum + "=" + result);
 	    } else if(sign == '+') {
-	    	int result = firstNum + secondNum;
+	    	result = firstNum + secondNum;
 	    	System.out.println(firstNum + "+" + secondNum + "=" + result);
 	    } else if(sign == '-') {
-	    	int result = firstNum - secondNum;
+	    	result = firstNum - secondNum;
 	    	System.out.println(firstNum + "-" + secondNum + "=" + result);
 	    } else if(sign == '%') {
-	    	int result = firstNum % secondNum;
+	    	result = firstNum % secondNum;
 	    	System.out.println(firstNum + "%" + secondNum + "=" + result);
 	    } else if(sign == '^') {
-	    	int result = firstNum;
+	    	result = firstNum;
 	    	for(int power = 1; power < secondNum; power++) {
 	    		result *= firstNum;
 	    	}
