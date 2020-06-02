@@ -9,18 +9,16 @@ public class LoopBreakerNew {
 		while("yes".equals(answer)) {
 			System.out.println("I`m LoopBreaker 2.0");
 			answer = "F";
-			while(answer != "yes") {
+			while(answer != "yes" || answer != "no") {
 				System.out.println("Can I help you?");
 				answer = scan.nextLine();
 				attemptCount++;
-				if("no".equals(answer)) {
+				if(attemptCount >= 3) {
 					break;
-				} else if(attemptCount >= 3) {
+				} else if("no".equals(answer) || "yes".equals(answer)) {
 					break;
-				} else if("yes".equals(answer)) {
-					break;
-				}
-			}
+				} 
+			} 
 		}
 	}
 }
