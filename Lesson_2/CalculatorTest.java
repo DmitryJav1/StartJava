@@ -4,10 +4,10 @@ public class CalculatorTest {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		Calculator calculator = new Calculator();
-		int loopSetup = 3;
-		String answer;
+		int attemptCount = 1;
+		String answer = "yes";
 
-		for(int i = 1; i < loopSetup; i++) {
+		while("yes".equals(answer)) {
 			System.out.print("Enter first value: ");
 			calculator.setFirstNum(scan.nextInt());
 
@@ -16,21 +16,17 @@ public class CalculatorTest {
 
 			System.out.print("Enter second value: ");
 			calculator.setSecondNum(scan.nextInt());
-
 			
 			calculator.calculate();
-			scan.nextLine();
-			System.out.println("Want to continue?[yes/no]");
-		    answer = scan.nextLine();
-
-			if("yes".equals(answer)) {
-				continue;
-			} else if ("no".equals(answer)) {
-				break;
-			} else if (answer != "yes" && answer != "no") {
-				System.out.println("Want to continue?[yes/no]");
+			answer = "f";
+			while(!"yes".equals(answer) && !"no".equals(answer)) {
+				scan.nextLine();
+				System.out.println("Want to continue[yes/no]");
 				answer = scan.nextLine();
-				i++;
+				attemptCount++;
+				if(attemptCount >= 3) {
+					break;
+				}
 			}
 		}
 	}

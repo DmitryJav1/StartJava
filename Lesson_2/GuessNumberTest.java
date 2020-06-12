@@ -6,21 +6,19 @@ public class GuessNumberTest {
 		Random random = new Random();
 		Scanner scan = new Scanner(System.in);
 		Player player = new Player();
-		String answer;
-		int loopSetup = 3;
+		String answer = "yes";
+		int attemptCount = 1;
 
-		for(int i = 2; i < loopSetup; i++) {
+		while("yes".equals(answer)) {
 			guessNumber.startGame();
-			System.out.println("Want to continue?[yes/no]:");
-			answer = scan.nextLine();
-			if("yes".equals(answer)) {
-				loopSetup+=3;
-			} else if ("no".equals(answer)) {
-				i = loopSetup + i * loopSetup;
-			} else if (answer != "yes" && answer != "no") {
+			answer = "F";
+			while(!"yes".equals(answer) && !"no".equals(answer)) {
 				System.out.println("Want to continue?[yes/no]:");
 				answer = scan.nextLine();
-				loopSetup--;
+				attemptCount++;
+				if(attemptCount >= 3) {
+					break;
+				}
 			}
 		}
 	}
