@@ -4,7 +4,7 @@ public class Calculator {
 	private int firstNum;
 	private char sign;
 	private int secondNum;
-	private int result = 1;
+	private int result;
 
 	void setFirstNum(int firstNum) {
 		this.firstNum = firstNum;
@@ -31,27 +31,34 @@ public class Calculator {
 	}
 
 	void calculate() {
-	    if(sign == '*') {
-	   	  result = firstNum * secondNum;
-	   	  System.out.println(firstNum + "*" + secondNum + "=" + result);
-	    } else if(sign == '/') {
-	    	result = firstNum / secondNum;
-	    	System.out.println(firstNum + "/" + secondNum + "=" + result);
-	    } else if(sign == '+') {
-	    	result = firstNum + secondNum;
-	    	System.out.println(firstNum + "+" + secondNum + "=" + result);
-	    } else if(sign == '-') {
-	    	result = firstNum - secondNum;
-	    	System.out.println(firstNum + "-" + secondNum + "=" + result);
-	    } else if(sign == '%') {
-	    	result = firstNum % secondNum;
-	    	System.out.println(firstNum + "%" + secondNum + "=" + result);
-	    } else if(sign == '^') {
-	    	result = firstNum;
-	    	for(int power = 1; power < secondNum; power++) {
-	    		result *= firstNum;
-	    	}
-	    	System.out.println(firstNum + "^" + secondNum + "=" + result);
+	    switch(sign) {
+	    	case '*' :
+	    		result = firstNum * secondNum;
+	    		System.out.println(firstNum + "*" + secondNum + "=" + result);
+	    		break;
+	    	case '/' :
+	    		result = firstNum / secondNum;
+	    		System.out.println(firstNum + "/" + secondNum + "=" + result);
+	    		break;
+	    	case '+' :
+	    		result = firstNum + secondNum;
+	    		System.out.println(firstNum + "+" + secondNum + "=" + result);
+	    		break;
+	    	case '-' :
+	    		result = firstNum - secondNum;
+	    		System.out.println(firstNum + "-" + secondNum + "=" + result);
+	    		break;
+	    	case '%' :
+	    		result = firstNum % secondNum;
+	    		System.out.println(firstNum + "%" + secondNum + "=" + result);
+	    		break;
+	    	case '^' :
+	    		result = 1;
+	    		for(int power = 1; power <= secondNum; power++) {
+	    			result *= firstNum;
+	    		}
+	    		System.out.println(firstNum + "^" + secondNum + "=" + result);
+	    		break;
 	    }
 	}
 }

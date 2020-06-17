@@ -7,7 +7,7 @@ public class CalculatorTest {
 		int attemptCount = 1;
 		String answer = "yes";
 
-		while("yes".equals(answer)) {
+		while(answer.equals("yes")) {
 			System.out.print("Enter first value: ");
 			calculator.setFirstNum(scan.nextInt());
 
@@ -18,8 +18,7 @@ public class CalculatorTest {
 			calculator.setSecondNum(scan.nextInt());
 			
 			calculator.calculate();
-			answer = "f";
-			while(!"yes".equals(answer) && !"no".equals(answer)) {
+			do {
 				scan.nextLine();
 				System.out.println("Want to continue[yes/no]");
 				answer = scan.nextLine();
@@ -27,7 +26,7 @@ public class CalculatorTest {
 				if(attemptCount >= 3) {
 					break;
 				}
-			}
+			} while(!answer.equals("yes") && !answer.equals("no"));
 		}
 	}
 }
