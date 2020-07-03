@@ -9,17 +9,16 @@ public class GuessNumberTest {
 		String answer = "yes";
 		int attemptCount = 1;
 
-		while("yes".equals(answer)) {
+		while(answer.equals("yes")) {
 			guessNumber.startGame();
-			answer = "F";
-			while(!"yes".equals(answer) && !"no".equals(answer)) {
+			do {
 				System.out.println("Want to continue?[yes/no]:");
 				answer = scan.nextLine();
 				attemptCount++;
 				if(attemptCount >= 3) {
 					break;
 				}
-			}
+			} while(!answer.equals("yes") && !answer.equals("no"));
 		}
 	}
 } 
