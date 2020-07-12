@@ -1,13 +1,32 @@
 import java.util.*;
 
 public class GuessNumber {			  	
+	String firstName;
+	String secondName;
+	int firstGuess;
+	int secondGuess;
+
+	void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	void setSecondName(String secondName) {
+		this.secondName = secondName;
+	}
+
+	void setFirstGuess(int firstGuess) {
+		this.firstGuess = firstGuess;
+	}
+
+	void setSecondGuess(int secondGuess) {
+		this.secondGuess = secondGuess;
+	}
+
 	void startGame() {
 		Scanner scan = new Scanner(System.in);
-		Player player = new Player();
 		Random r = new Random();
-		player.setPlayers();
-		int firstGuess = 0;
-		int secondGuess = 0;
+		//int firstGuess;
+		//int secondGuess;
 		int maxNumber = 100;
 		int hiddenNum = r.nextInt(maxNumber + 1);
 		do {	  		
@@ -16,21 +35,21 @@ public class GuessNumber {
 	  		secondGuess = scan.nextInt();
 
 	  		if(firstGuess < hiddenNum) {
-	  			System.out.println("Number " + player.getFirstNickname() + " less than correct");
+	  			System.out.println("Number " + firstName + " less than correct");
 
 	  		} else if (firstGuess > hiddenNum) {
-	  			System.out.println("Number " + player.getFirstNickname() + " greater than correct");
+	  			System.out.println("Number " + firstName + " greater than correct");
 	  	  	} else if (firstGuess == hiddenNum) {
-	  	  		System.out.println("Player " + player.getFirstNickname() + " won!");
+	  	  		System.out.println("Player " + firstName + " won!");
 	  	  		break; 
 	  	  	}
 
 	  	  	if (secondGuess > hiddenNum) {
-	  	  		System.out.println("Number " + player.getSecondNickname() + " greater than correct");
+	  	  		System.out.println("Number " + secondName + " greater than correct");
 	  	  	} else if (secondGuess < hiddenNum) {
-	  	  		System.out.println("Number " + player.getSecondNickname() + " less than correct");
+	  	  		System.out.println("Number " + secondName + " less than correct");
 	  	  	} else if (secondGuess == hiddenNum) {
-	  	  		System.out.println("Player " + player.getSecondNickname() + " won!");
+	  	  		System.out.println("Player " + secondName + " won!");
 	  	  		break;
 	  	  	} 	
 		} while(firstGuess != hiddenNum || secondGuess != hiddenNum);	

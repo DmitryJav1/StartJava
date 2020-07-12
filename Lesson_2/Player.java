@@ -1,21 +1,26 @@
 import java.util.*;
 
 public class Player {
-	private String firstNickname;
-	private String secondNickname;
+	private String name;
+	private int number = 0;
 
-	void setPlayers() {
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter nicknames of 2 players");
-		firstNickname = scan.nextLine();
-		secondNickname = scan.nextLine();
+	public Player(String name) {
+		this.name = name;
 	}
 
-	public String getFirstNickname() {
-		return firstNickname;
+	void setName(String name) {
+		this.name = name;
 	}
 
-	public String getSecondNickname() {
-		return secondNickname;
+	void setNumber(int number) {
+		this.number = number;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getNumber() {
+		return number;
 	}
 }
